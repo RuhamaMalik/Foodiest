@@ -1,0 +1,723 @@
+@font-face {
+    /* fonts used in the app */
+    font-family: 'The Nautigal';
+    src: url('./assets/fonts/TheNautigal-Bold.ttf');
+}
+
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./assets/fonts/Poppins-Regular.ttf');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+
+:root {
+    --yellow: #d69642dc;
+    --font1: 'The Nautigal';
+    --font2: 'Poppins';
+    --black: #141418;
+    --bg: #01010363;
+    --border: .1rem solid rgba(58, 46, 46, 0.3);
+}
+
+
+html {
+    font-size: 62.4%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+    font-family: var(--font2);
+}
+
+
+/* Home Page Styling*/
+
+body {
+    background: var(--bg);
+}
+
+/* Header Styling */
+
+.header {
+    padding: 1.5rem 9%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    /* z-index: 1000; */
+    box-shadow: 0.5rem 1.5rem rgba(119, 110, 110, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: black;
+    border-bottom: var(--border);
+
+}
+
+.header #user {
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    text-align: start;
+
+
+}
+
+.user-div {
+    width: 10%;
+    height: 80%;
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .logo {
+    font-size: 3.5rem;
+    display: flex;
+    align-items: center;
+    /* justify-content: flex-start; */
+    text-decoration: none;
+    color: white;
+    font-family: var(--font1);
+
+}
+
+.header .logo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.header .navbar a, .user-div a {
+    font-size: 1.6rem;
+    margin-left: 2rem;
+    text-decoration: none;
+    color: white;
+
+}
+
+.header .navbar #user {
+    display: none;
+}
+
+.header .navbar a:hover, .user-div a i:hover {
+    color: var(--yellow);
+    border-bottom: .1rem solid var(--yellow);
+    padding-bottom: .5rem;
+}
+
+
+.header .icons i {
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.header .icons i:hover, .header .icons #drawer:hover {
+    color: var(--yellow);
+}
+
+
+#drawer {
+    font-size: 2.5rem;
+    /* border-radius: .5rem; */
+    color: white;
+    /* background: rgb(87, 84, 84); */
+    padding: 1rem 1.5rem;
+    display: none;
+}
+
+.header .search-form {
+    position: absolute;
+    top: 115%;
+    right: 7%;
+    background: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.header .search-form.active {
+    transform: scaleY(1);
+}
+
+.header .search-form input {
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 1rem;
+    text-transform: none;
+}
+
+.header .search-form label {
+    cursor: pointer;
+    font-size: 2.2rem;
+    margin-right: 1.5rem;
+    color: var(--black);
+}
+
+.header .search-form label:hover {
+    color: var(--yellow);
+}
+
+
+
+.dropdown-content {
+    width: 12rem;
+    position: absolute;
+    top: 105%;
+    right: 35%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid var(--yellow);
+    outline: 1px solid white;
+    background: black;
+    box-shadow: .5rem .5rem 0 rgba(163, 136, 86, 0.521);
+    transform-origin: top right;
+    transform: scale(0);
+    opacity: 0;
+    transition: none;
+    padding-bottom: 30px;
+    padding-top: 2rem;
+
+}
+
+.dropdown-content a {
+    text-decoration: none;
+    width: 98%;
+    padding-top: .3rem;
+    margin-bottom: .5rem;
+    margin-right: 16.3%;
+    color: white;
+    text-align: center;
+    font-size: 1.6rem;
+    font-family: none;
+}
+
+.dropdown-content.active a:hover {
+    background-color: var(--yellow);
+    color: white;
+}
+
+.dropdown-content.active {
+    transform: scale(1);
+    opacity: 1;
+    transition: .2s ease-out;
+
+}
+
+/* Home Page starts */
+
+.home {
+    height: max-content;
+
+}
+
+
+
+/*User Account Page */
+
+#account-Body {
+    background-image: url("./assets/images/bac2.webp");
+    background-size: 100% 100vh;
+
+}
+
+.accountPage {
+    position: relative;
+    width: 48%;
+    height: 66vh;
+    border-radius: 20px;
+    box-shadow: 5px 5px 12px rgb(17, 16, 16), inset 5px 5px 12px rgba(235, 228, 228, 0.16);
+    margin: 10% auto;
+    right: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accountPage .logo {
+    top: -5%;
+    left: -8%;
+    position: absolute;
+    width: 28%;
+    height: 36%;
+    border: 3px dashed rgb(136, 48, 74);
+    border-radius: 50%;
+    background-image: url("./assets/images/shaff1.jpg");
+    background-position: center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: white;
+    z-index: 1;
+}
+
+.accountPage h1 {
+    font-family: var(--font1);
+    font-size: 3.8rem;
+    width: 100%;
+    padding: 4.5% 0;
+    text-align: center;
+    background-color: rgba(230, 64, 43, 0.575);
+    border-top-right-radius: 20px;
+
+}
+
+.accountPage .account {
+    width: 90%;
+    height: 50vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.accountPage .account h2 {
+    font-family: var(--font1);
+    font-size: 5em;
+    padding-bottom: 2%;
+}
+
+.accountPage form {
+    background-color: rgba(236, 167, 167, 0.671);
+    padding: 3% 5%;
+    width: 75%;
+    height: 78%;
+    display: inherit;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.accountPage input {
+    width: 95%;
+    padding: 3% 7%;
+    border-radius: 20px;
+    background-color: white;
+    text-transform: lowercase;
+    box-shadow: 5px 5px 12px rgb(17, 16, 16), inset 5px 5px 12px rgba(235, 228, 228, 0.16);
+    caret-color: red;
+}
+
+.accountPage form div {
+    font-size: 1.3rem;
+    width: 100%;
+}
+
+.accountPage form a {
+    text-decoration: none;
+    color: black;
+    align-self: flex-end;
+    font-size: 1.1rem;
+
+}
+
+.accountPage form a:hover {
+    font-size: 1.3rem;
+    border-bottom: 1.5px solid white;
+    font-weight: bold;
+}
+
+.accountPage button {
+    width: 50%;
+    padding: 3%;
+    background-color: var(--black);
+    font-size: 1.8rem;
+    border-radius: 20px;
+    color: white;
+}
+
+.accountPage button:hover {
+    font-size: 2rem;
+    width: 55%;
+    outline: 1px solid white;
+}
+
+.account>div {
+    margin: 3% 0;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.account>div a {
+    font-size: 1.3rem;
+    box-shadow: 5px 5px 12px rgb(17, 16, 16), inset 5px 5px 12px rgba(235, 228, 228, 0.16);
+    padding: 5px 8px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: black;
+
+}
+
+.account>div a:hover {
+    background-color: rgba(230, 64, 43, 0.575);
+    font-size: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Quries */
+
+
+@media (max-width:991px) {
+
+    html {
+        font-size: 55%;
+    }
+
+    .header {
+        padding: 1.5rem 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+    .user-div {
+        display: none;
+    }
+
+}
+
+@media (max-width:786px) {
+    #drawer {
+        display: inline-block;
+    }
+
+    .accountPage h1 {
+        font-size: 3.7rem;
+    }
+
+
+    /* .home, .about .row , .book .row{
+      flex-wrap: wrap;
+    }  */
+    .header .navbar {
+        width: 22rem;
+        position: absolute;
+        top: 105%;
+        right: 1rem;
+        border: 2px solid var(--yellow);
+        border-radius: 20px;
+        background: rgba(15, 15, 15, 0.473);
+        box-shadow: .5rem .5rem 0 rgba(163, 136, 86, 0.521);
+        transform-origin: top right;
+        transform: scale(0);
+        opacity: 0;
+        transition: none;
+        /* padding-bottom: 30px; */
+
+
+    }
+
+    .header .navbar #user {
+        display: inline-block;
+        font-size: 2rem;
+        margin-bottom: -20px;
+    }
+
+
+    .header .navbar a {
+        font-size: 2rem;
+        display: block;
+        margin: 2.5rem;
+        color: white;
+    }
+
+    .header .navbar.active {
+        transform: scale(1);
+        opacity: 1;
+        transition: .2s ease-out;
+    }
+
+    .header .navbar.active a:hover, .header .navbar.active #user:hover {
+        padding-left: 8px;
+        color: var(--yellow);
+        font-size: 2.2rem;
+
+    }
+
+    .header .search-form {
+        width: 90%;
+        right: 2rem;
+    }
+
+    .dropdown-content.active {
+        position: static;
+        width: 80%;
+        margin: auto;
+        margin-top: -18px;
+        background: transparent;
+        border: none;
+        background: transparent;
+        outline: none;
+
+    }
+
+    .dropdown-content.active a {
+        margin: 0;
+        margin-top: 5px;
+        color: white;
+    }
+
+    .dropdown-content.active a:hover {
+        background-color: black;
+    }
+
+    .accountPage .logo {
+        width: 23%;
+        height: 26%;
+
+    }
+
+}
+
+
+@media (max-width:672px) {
+    .accountPage .logo {
+        height: 20%;
+        width: 25%;
+    }
+
+    #content1::after {
+        content: "\a \a";
+        white-space: pre;
+    }
+.accountPage{
+    height: 68vh;
+
+}
+.account>div {
+    margin-bottom: 5%;
+}
+.accountPage form {
+    width: 95%;
+}
+
+.accountPage input {
+    width: 95%;
+}
+
+}
+
+
+@media (max-width:450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .header .logo img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .header .logo i {
+        display: none;
+    }
+
+    .accountPage .logo {
+        /* height: 20%; */
+        width: 35%;
+    }
+
+    .accountPage {
+        width: 65%;
+        right: 12%;
+        margin: 18% auto;
+
+    }
+
+    .accountPage h1 {
+        /* left: 21%; */
+        font-size: 3rem;
+        /* width: 80%; */
+
+    }
+
+}
+
+@media (max-width:360px) {
+    .header .icons {
+        display: flex;
+        padding: 1rem;
+    }
+
+    .header .icons {
+        align-items: center;
+    }
+
+    .accountPage h1 {
+        font-size: 2.5rem;
+        padding: 5.9% 0 6.9% 5%;
+
+    }
+.accountPage input {
+    width: 100%;
+    padding: 3% 7%;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+/* start welcome animation */
+
+.welcome .splash {
+    border: 130em solid;
+    border-image: linear-gradient(to right bottom, #e8f1ebbe, rgba(238, 127, 83, 0.274), #0c0908a9);
+    position: fixed;
+    left: 50%;
+    top: 100%;
+    /* z-index: 1500; */
+    display: block;
+    box-sizing: initial;
+    overflow: hidden;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: puff 0.5s 1.8s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, borderRadius 0.2s 2.3s linear forwards;
+}
+
+/* jumping circle styling */
+.welcome #welcome {
+    display: flex;
+    border: 4px salmon solid;
+    box-shadow: 5px 10px 5px 5px rgb(160, 154, 153);
+    justify-content: center;
+    align-items: center;
+    font: bolder 31px var(--font1);
+    box-shadow: inset 0px 33px 25px 0 #000,
+        inset 0 66px 15px 0px #ccc,
+        inset 0 99px 5px 0px #fff;
+    text-shadow: 1px 1px 2px rgb(2, 58, 8), 0 0 1em rgb(17, 119, 17), 0 0 0.2em rgb(139, 31, 4);
+    ;
+    /* background: #f08c1a ; */
+    background-color: linear-gradient(red, yellow);
+    z-index: 8;
+    width: 56px;
+    height: 56px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    overflow: hidden;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    animation: init 0.5s 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, moveDown 1s 0.8s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards, moveUp 1s 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, materia 0.5s 2.7s cubic-bezier(0.86, 0, 0.07, 1) forwards, hide 2s 2.9s ease forwards;
+}
+
+@keyframes init {
+    /* splash screen time styling */
+
+    0% {
+        width: 0px;
+        height: 0px;
+    }
+
+    100% {
+        width: 156px;
+        height: 156px;
+        margin-top: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes puff {
+    0% {
+        top: 100%;
+        height: 0px;
+        padding: 0px;
+    }
+
+    100% {
+        top: 50%;
+        height: 100%;
+        padding: 0px 100%;
+    }
+}
+
+@keyframes borderRadius {
+    0% {
+        border-radius: 70%;
+    }
+
+    100% {
+        border-radius: 0px;
+    }
+}
+
+@keyframes moveDown {
+    0% {
+        top: 50%;
+    }
+
+    50% {
+        top: 40%;
+    }
+
+    100% {
+        top: 100%;
+    }
+}
+
+@keyframes moveUp {
+    0% {
+        background: #d3d2da;
+        top: 100%;
+    }
+
+    50% {
+        top: 40%;
+    }
+
+    100% {
+        top: 50%;
+        background-image: linear-gradient(to right, rgb(22, 2, 2), rgb(83, 83, 81));
+    }
+}
+
+@keyframes hide {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
