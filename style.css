@@ -43,7 +43,7 @@ html {
 /* Home Page Styling*/
 
 body {
-    background: var(--bg);
+    background: var(--black);
 }
 
 /* Header Styling */
@@ -231,14 +231,38 @@ body {
 
 }
 
+/* Account Page  */
 
-
-/*User Account Page */
-
-#account-Body {
+#signIn-Body, #signUp-Body {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
     background-image: url("./assets/images/bac2.webp");
     background-size: 100% 100vh;
+}
 
+#signIn-Body.signIn {
+    display: none;
+}
+
+#signUp-Body {
+    display: none;
+}
+
+#signUp-Body.signUpBody {
+    display: inline-block;
+    /* background-image: url("./assets/images/food1.jpg"); */
+/* color: white; */
+}
+.carousel{
+    position: absolute;
+    top: 40%;
+}
+.carousel-inner{
+    background-color: orange;
+}
+.carousel-item {
+    background-color: aqua;
 }
 
 .accountPage {
@@ -316,6 +340,7 @@ body {
     text-transform: lowercase;
     box-shadow: 5px 5px 12px rgb(17, 16, 16), inset 5px 5px 12px rgba(235, 228, 228, 0.16);
     caret-color: red;
+    font-size: 1.3rem;
 }
 
 .accountPage form div {
@@ -513,20 +538,23 @@ body {
         content: "\a \a";
         white-space: pre;
     }
-.accountPage{
-    height: 68vh;
 
-}
-.account>div {
-    margin-bottom: 5%;
-}
-.accountPage form {
-    width: 95%;
-}
+    .accountPage {
+        height: 68vh;
 
-.accountPage input {
-    width: 95%;
-}
+    }
+
+    .account>div {
+        margin-bottom: 5%;
+    }
+
+    .accountPage form {
+        width: 95%;
+    }
+
+    .accountPage input {
+        width: 95%;
+    }
 
 }
 
@@ -558,12 +586,17 @@ body {
     }
 
     .accountPage h1 {
-        /* left: 21%; */
         font-size: 3rem;
-        /* width: 80%; */
 
     }
 
+    .account form div {
+        font-size: 2rem;
+    }
+
+    .account form a {
+        font-size: 1.3rem;
+    }
 }
 
 @media (max-width:360px) {
@@ -581,10 +614,11 @@ body {
         padding: 5.9% 0 6.9% 5%;
 
     }
-.accountPage input {
-    width: 100%;
-    padding: 3% 7%;
-}
+
+    .accountPage input {
+        width: 100%;
+        padding: 3% 7%;
+    }
 
 
 }

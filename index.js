@@ -38,3 +38,55 @@ dropDown.addEventListener('click', function(){
 })
 
 //header ends
+
+
+
+// account Section Starts
+
+function emptyFieldValues(){
+  var email = document.getElementById('email');
+  var pswd = document.getElementById('password');
+
+  email.value= "";
+pswd.value = "";
+
+}
+function fieldValues() {
+var email = document.getElementById('email').value;
+var pswd = document.getElementById('password').value;
+
+if (email === '') {
+  alert('Email is Required');
+} else {
+  console.log(`Email = ${email}  Password = ${pswd}`);
+}
+emptyFieldValues();
+}
+
+
+function goToSignUp() {
+  var signUpPage = document.getElementById("signUp-Body");
+    var signInPage = document.getElementById("signIn-Body");
+    signInPage.classList.toggle("signIn");
+    signUpPage.classList.toggle("signUpBody");
+
+}
+
+
+// var accountBack = document.querySelector('.signIn-Body');
+
+// document.querySelector('div .signup').onclick = () =>{
+//   alert("hello");
+//   // searchForm.classList.toggle('active');
+//   // navbar.classList.remove('active');
+//   // dropDown_content.classList.remove('active');
+
+// }
+// var accountBack = document.querySelector('.signIn-Body');
+// var SignUp = document.querySelector('.signup');
+// SignUp.addEventListener('click', function(){
+// alert("hello")
+// })
+
+
+// account Section ends
