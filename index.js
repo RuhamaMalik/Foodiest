@@ -73,20 +73,8 @@ function goToSignUp() {
 }
 
 
-// var accountBack = document.querySelector('.signIn-Body');
-
-// document.querySelector('div .signup').onclick = () =>{
-//   alert("hello");
-//   // searchForm.classList.toggle('active');
-//   // navbar.classList.remove('active');
-//   // dropDown_content.classList.remove('active');
-
-// }
-// var accountBack = document.querySelector('.signIn-Body');
-// var SignUp = document.querySelector('.signup');
-// SignUp.addEventListener('click', function(){
-// alert("hello")
-// })
-
+function bussinessAccountPage() {
+  
+}
 
 // account Section ends
