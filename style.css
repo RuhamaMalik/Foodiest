@@ -46,6 +46,20 @@ body {
     /* background: var(--black); */
 }
 
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding:.9rem 3rem;
+    font-size: 1.7rem;
+    color:#fff;
+    background: var(--yellow);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+
 /* Header Styling */
 
 .header {
@@ -226,13 +240,44 @@ body {
 
 /* Home Page starts */
 
-.home {
-    height: max-content;
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background:url('./assets/images/home3.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content{
+    max-width: 60rem;
+    background-color: var(--yellow);
+    margin-left: 2%;
+    padding: 3% 2%;
 
 }
 
-/* Account Page  */
+.home .content h3{
+    font-size: 5rem;
+    text-transform: uppercase;
+    color:#fff;
+}
 
+.home .content p{
+    font-size: 2rem;
+    font-weight: lighter;
+    line-height: 1.8;
+    padding:1rem 0;
+    color: white;
+}
+
+.home a{
+    background-color: #fff;
+    color: #000;
+}
+
+/* Account Page  starts*/
+/* SignIn And SignUp Page Styling */
 #signIn-Body, #signUp-Body {
     position: absolute;
     height: 100vh;
@@ -252,37 +297,44 @@ body {
 #signUp-Body.signUpBody {
     display: inline-block;
 }
+
 /* signUp carousel starts */
-.line{
+.line {
     background-color: burlywood;
     height: 38vh;
     padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
 }
-.lineUp{
+
+.lineUp {
     animation: 7s anim-lineUp ease-out infinite;
-  }
-  @keyframes anim-lineUp {
+}
+
+@keyframes anim-lineUp {
     0% {
-      opacity: 0;
-      transform: translateY(80%);
+        opacity: 0;
+        transform: translateY(80%);
     }
+
     20% {
-      opacity: 0;
+        opacity: 0;
     }
+
     50% {
-      opacity: 1;
-      transform: translateY(0%);
+        opacity: 1;
+        transform: translateY(0%);
     }
+
     100% {
-      opacity: 1;
-      transform: translateY(0%);
+        opacity: 1;
+        transform: translateY(0%);
     }
-  }
-  /* signUp carousel ends */
+}
+
+/* signUp carousel ends */
 
 .accountPage {
     position: relative;
@@ -333,10 +385,12 @@ body {
     align-items: center;
     flex-direction: column;
 }
-#signUp-Body .accountPage .account div{
-position:sticky;
-bottom: 0;
+
+#signUp-Body .accountPage .account div {
+    position: sticky;
+    bottom: 0;
 }
+
 .accountPage .account h2 {
     font-family: var(--font1);
     font-size: 5em;
@@ -365,7 +419,7 @@ bottom: 0;
     font-size: 1.3rem;
 }
 
-.accountPage form div {
+.accountPage form label {
     font-size: 1.3rem;
     width: 100%;
 }
@@ -420,12 +474,225 @@ bottom: 0;
     font-size: 1.5rem;
 }
 
+/* Bussiness Registration Form Styling */
+#Bzns-form-page{
+    width: 100%;
+    height: 100vh;
+    background-image: url("./assets/images/bac2.webp");
+    background-size: 100% 100vh;
+    display: none;
+}
+
+#Bzns-form-page.active {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+#Bzns-form-page .form-parent{
+    width: 90%;
+    height: 90%;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.541);
+}
+
+#Bzns-form-page .form-parent .heading {
+    background-color: rgba(0, 0, 0, 0.473);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 20%;
+    border-radius: 10px 10px 0 0;
+    padding-left: 5%;
+}
+
+#Bzns-form-page .form-parent .heading h2 {
+    font-size: 3.5rem;
+
+}
+
+#Bzns-form-page .form-parent .heading p {
+    font-size: 1.5rem;
+    text-transform: lowercase;
+
+}
+
+#Bzns-form-page .form-parent .form-div form{
+    width: 100%;
+    display: inline-block;
+    /* flex-direction: column;
+    justify-content: space-between; */
+    height: 100%;
+
+}
+
+#Bzns-form-page .form-parent .form-div form input{
+        width: 35%;
+        padding: 8px 20px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        text-transform: lowercase;
+        caret-color: red;
+
+    
+}
+/* Customer Registration Form Styling */
+#cA-form-page {
+    display: none;
+    background-image: url("./assets/images/bac2.webp");
+    background-size: 100% 100vh;
+}
+
+#cA-form-page.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+
+}
+
+.form-parent {
+    position: absolute;
+    width: 82%;
+    height: 80%;
+    border-radius: 20px;
+}
+
+#cA-form-page .child1-logo {
+    width: 50%;
+    height: 100%;
+    /* background-color: rgba(150, 131, 131, 0.438); */
+    position: absolute;
+    border-radius: 20px 0 0 20px;
+    background-color: rgba(46, 45, 45, 0.664);
+
+}
+
+.linee {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.linee .lineUp {
+    color: white;
+    font-size: 3.5rem;
+    /* background-color: rgba(29, 22, 21, 0.555); */
+    padding: 2px;
+    margin-top: 1rem;
+}
+
+.linee .lineUp.logo {
+    width: 28%;
+    height: 25%;
+    border: 3px dashed rgb(136, 48, 74);
+    border-radius: 50%;
+    background-image: url("./assets/images/shaff1.jpg");
+    background-position: center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: white;
+
+}
+
+#cA-form-page .child2-form {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.541);
+    right: 0;
+    border-radius: 0 20px 20px 0;
+
+}
+
+.child2-form .heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 20%;
+    border-top-right-radius: 20px;
+    padding-left: 5%;
+}
+
+.child2-form .heading h2 {
+    font-size: 3.5rem;
+
+}
+
+.child2-form .heading p {
+    font-size: 1.5rem;
+    text-transform: lowercase;
+
+}
+
+.form-parent .form-div {
+   
+    border-radius: 5px;
+    padding: 20px;
+    height: 80%;
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+.form-parent .form-div form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.form-parent .form-div form input {
+    width: 100%;
+    padding: 8px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-transform: lowercase;
+    caret-color: red;
+
+}
+
+.form-parent .form-div form input:focus {
+    border: 1.5px solid black;
 
 
+}
+
+.form-div form button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+
+}
+
+.form-div form button:hover {
+    font-size: 2rem;
+}
+
+.form-div form .checkbox {
+    align-self: flex-end;
+    
+}
+
+.form-div form .checkbox input {
+    width: fit-content;
+}
 
 
+.form-div form .checkbox a {
+    color: red;
+    text-transform: lowercase;
 
+}
 
+/* Account Page ends */
 
 
 
@@ -546,6 +813,8 @@ bottom: 0;
 
     }
 
+
+
 }
 
 
@@ -576,12 +845,79 @@ bottom: 0;
     .accountPage input {
         width: 95%;
     }
+
     .accountPage .account .line h2 {
-font-size: 4rem;
+        font-size: 4rem;
+    }
+    .form-parent {
+        width: 90%;
+        height: 98%;
+    }
+    
+/* customer account page */
+    #cA-form-page .child1-logo {
+        width: 100%;
+        height: 38%;
+        border-radius: 20px 20px 0 0;
     }
 
-}
+    #cA-form-page .child2-form {
+        width: 100%;
+        height: 62%;
+        top: 38%;
+        border-radius: 0 0 20px 20px ;
 
+    }
+    .form-parent .form-div {
+        padding: 0 20px 20px 20px;
+        height: 85%;
+        width: 100%;
+    }
+
+    .child2-form .heading {
+        width: 100%;
+        height: 15%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    
+    .child2-form .heading h2 {
+        font-size: 3rem;
+    }
+    .child2-form .heading p {
+        padding-left: 2%;
+        color: red;
+font-size: 3rem;
+    font-family: var(--font1);
+    
+    }
+
+    .linee .lineUp.logo {
+        width: 15%;
+        height: 35%;    
+    }
+    
+    .form-parent .form-div form input {
+        width: 100%;
+        padding: 5px 20px;
+        margin: 5px 0;
+    
+    }
+    .form-div form button {
+       
+        padding: 7px 20px;
+    
+    }
+.form-div form .checkbox input{
+width: fit-content;
+}
+   
+
+
+
+
+}
 
 @media (max-width:450px) {
     html {
@@ -620,15 +956,32 @@ font-size: 4rem;
     .account form a {
         font-size: 1.3rem;
     }
-    #registerNow::after{
+
+    #registerNow::after {
         content: "\a \a";
         white-space: pre;
     }
-    .lineUp{
+
+    .lineUp {
         font-size: 1.7rem;
 
     }
+
+
     
+.linee .lineUp.logo {
+    width: 20%;
+    height: 30%;
+
+}
+.child2-form .heading {
+    height: 20%;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: flex-start; */
+}
+
+
 }
 
 @media (max-width:360px) {
@@ -651,7 +1004,12 @@ font-size: 4rem;
         width: 100%;
         padding: 3% 7%;
     }
-
+    .linee .lineUp.logo {
+        width: 25%;
+        height: 33%;
+    
+    }
+    
 }
 
 

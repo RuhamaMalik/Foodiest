@@ -27,11 +27,12 @@
 
             <div class="account">
                 <h2>Login</h2>
-                <form>
-                    <div> Email Address:</div>
-                    <input type="text" id="email" placeholder="abc@gmail.com">
-                    <div> Password: </div>
-                    <input type="password" id="password" placeholder="Enter Your Password">
+                <form action="">
+                    <!-- <div> Email Address:</div> -->
+                    <label for="email">Email Address:</label>
+                    <input type="text" id="email" name="email" placeholder="abc@gmail.com">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter Your Password">
                     <a href="#">Forgot Password?</a>
                     <button type="button" onclick="fieldValues()">Login</button>
                 </form>
@@ -57,22 +58,14 @@
             </div>
             <h1>Foodiest World</h1>
             <div class="account">
-                <!-- <h2>SignUp Account</h2> -->
-
                 <div id="carouselExampleSlidesOnly" class="carousel slide w-100 h-75" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <div class="line">
-                                <h2 class='lineUp'>Growing  Up?</h2>
+                                <h2 class='lineUp'>Growing Up?</h2>
                                 <h4 class='lineUp'><span id="registerNow">Register Now!</span> Business Account</h4>
                                 <h2 class="lineUp"> <i class="fas fa-chart-line  "></i></h2>
                             </div>
-                            <!-- <div class="line2">
-                              </div> -->
-                            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium voluptatem autem
-                                fuga, accusamus corporis suscipit.</p> -->
-
-                            <!-- <img src="../images/grow3.gif" class="d-inline-block w-100 " alt="..."> -->
                         </div>
                         <div class="carousel-item">
                             <div class="line">
@@ -94,6 +87,81 @@
 
         </div>
     </div>
+
+    <!-- Bussiness Account Registration form -->
+
+    <div id="Bzns-form-page">
+        <div class="form-parent">
+            <div class="heading">
+                <h2>SignUp Bussiness Account</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, quisquam.</p>
+            </div>
+            <div class="form-div">
+                <form action="">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" placeholder="Your name...">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" placeholder="abc@gmail.com">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" placeholder="Your password">
+                    <label for="check-password">Check Password:</label>
+                    <input type="password" id="check-password" placeholder="Rewrite password">
+
+                    <div class="checkbox"><input type="checkbox">
+                        <label><a href="#">agree terms and conditions</a> </label>
+                    </div>
+                    <button type="button">SignUp</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Customer Account Registration Form -->
+
+    <div id="cA-form-page">
+        <div class="form-parent">
+            <div class="child1-logo linee">
+                <div class="lineUp logo"></div>
+                <h1 class='lineUp'>Welcome To </h1>
+                <h1 class='lineUp'>Foodiest World</h1>
+                <h1 class="lineUp fa fa-cutlery" aria-hidden="true"></h1>
+            </div>
+            <div class="child2-form">
+                <div class="heading">
+                    <h2>SignUp Now!</h2>
+                    <p>And enjoy our best foods and recipes.
+                    </p>
+                </div>
+                <div class="form-div">
+                    <form action="">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" placeholder="Your name...">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" placeholder="abc@gmail.com">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" placeholder="Your password">
+                        <label for="check-password">Check Password:</label>
+                        <input type="password" id="check-password" placeholder="Rewrite password">
+
+                        <div class="checkbox"><input type="checkbox">
+                            <label><a href="#">agree terms and conditions</a> </label>
+                        </div>
+                        <button type="button">SignUp</button>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"

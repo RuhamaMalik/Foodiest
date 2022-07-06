@@ -74,7 +74,26 @@ function goToSignUp() {
 
 
 function bussinessAccountPage() {
-  
+  var signUpPage = document.getElementById("signUp-Body");
+  var bznsRegPage = document.getElementById("Bzns-form-page");
+  signUpPage.classList.remove("signUpBody");
+bznsRegPage.classList.toggle("active");
 }
+
+
+
+function userAccountPage() {
+  var signUpPage = document.getElementById("signUp-Body");
+  // var bznsRegPage = document.getElementById("Bzns-form-page");
+  var ctmrRegPage = document.getElementById("cA-form-page");
+
+  signUpPage.classList.remove("signUpBody");
+// bznsRegPage.classList.remove("active");
+ctmrRegPage.classList.toggle("active");
+
+}
+
+
+
 
 // account Section ends
