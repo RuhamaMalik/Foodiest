@@ -40,25 +40,23 @@ html {
 }
 
 
-/* Home Page Styling*/
 
 body {
     /* background: var(--black); */
 }
 
-
-.btn{
-    margin-top: 1rem;
-    display: inline-block;
-    padding:.9rem 3rem;
-    font-size: 1.7rem;
+/* .heading{
+    text-align: center;
     color:#fff;
-    background: var(--yellow);
-    cursor: pointer;
-    text-decoration: none;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
 }
 
-
+.heading span{
+    color:var(--yellow);
+    text-transform: uppercase;
+} */
 
 /* Header Styling */
 
@@ -68,7 +66,7 @@ body {
     top: 0;
     right: 0;
     left: 0;
-    /* z-index: 1000; */
+    z-index: 500;
     box-shadow: 0.5rem 1.5rem rgba(119, 110, 110, 0.1);
     display: flex;
     align-items: center;
@@ -197,7 +195,7 @@ body {
     width: 12rem;
     position: absolute;
     top: 105%;
-    right: 35%;
+    right: 28%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -224,6 +222,7 @@ body {
     text-align: center;
     font-size: 1.6rem;
     font-family: none;
+
 }
 
 .dropdown-content.active a:hover {
@@ -236,48 +235,12 @@ body {
     opacity: 1;
     transition: .2s ease-out;
 
-}
 
-/* Home Page starts */
-
-.home{
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    background:url('./assets/images/home3.jpg') no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-.home .content{
-    max-width: 60rem;
-    background-color: var(--yellow);
-    margin-left: 2%;
-    padding: 3% 2%;
-
-}
-
-.home .content h3{
-    font-size: 5rem;
-    text-transform: uppercase;
-    color:#fff;
-}
-
-.home .content p{
-    font-size: 2rem;
-    font-weight: lighter;
-    line-height: 1.8;
-    padding:1rem 0;
-    color: white;
-}
-
-.home a{
-    background-color: #fff;
-    color: #000;
 }
 
 /* Account Page  starts*/
 /* SignIn And SignUp Page Styling */
+
 #signIn-Body, #signUp-Body {
     position: absolute;
     height: 100vh;
@@ -296,6 +259,17 @@ body {
 
 #signUp-Body.signUpBody {
     display: inline-block;
+}
+
+.backArrow {
+    z-index: 1;
+    font-size: 3rem;
+    color: white;
+    background-color: black;
+    border-radius: 50%;
+    padding: 1%;
+    margin-left: 1%;
+    text-align: center;
 }
 
 /* signUp carousel starts */
@@ -475,7 +449,7 @@ body {
 }
 
 /* Bussiness Registration Form Styling */
-#Bzns-form-page{
+#Bzns-form-page {
     width: 100%;
     height: 100vh;
     background-image: url("./assets/images/bac2.webp");
@@ -489,7 +463,7 @@ body {
     justify-content: center
 }
 
-#Bzns-form-page .form-parent{
+#Bzns-form-page .form-parent {
     width: 90%;
     height: 90%;
     border-radius: 20px;
@@ -518,7 +492,7 @@ body {
 
 }
 
-#Bzns-form-page .form-parent .form-div form{
+#Bzns-form-page .form-parent .form-div form {
     width: 100%;
     display: inline-block;
     /* flex-direction: column;
@@ -527,17 +501,18 @@ body {
 
 }
 
-#Bzns-form-page .form-parent .form-div form input{
-        width: 35%;
-        padding: 8px 20px;
-        margin: 8px 0;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        text-transform: lowercase;
-        caret-color: red;
+#Bzns-form-page .form-parent .form-div form input {
+    width: 35%;
+    padding: 8px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-transform: lowercase;
+    caret-color: red;
 
-    
+
 }
+
 /* Customer Registration Form Styling */
 #cA-form-page {
     display: none;
@@ -631,7 +606,7 @@ body {
 }
 
 .form-parent .form-div {
-   
+
     border-radius: 5px;
     padding: 20px;
     height: 80%;
@@ -678,7 +653,7 @@ body {
 
 .form-div form .checkbox {
     align-self: flex-end;
-    
+
 }
 
 .form-div form .checkbox input {
@@ -695,10 +670,270 @@ body {
 /* Account Page ends */
 
 
+/* Home Page starts */
+.section-home {
+    height: 100vh;
+    background-image: url('./assets/images/home3.jpg');
+    background-size: 100% 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.section-home div {
+    background-color: var(--yellow);
+    margin-left: 2%;
+    padding: 3% 2%;
+    z-index: 1;
+    border-radius: 5px;
+
+}
+
+
+
+.section-home h1 {
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.section-home p {
+    font-size: 2rem;
+    font-weight: lighter;
+    line-height: 1.8;
+    padding: 1rem 0;
+    color: white;
+}
+
+.section-home a {
+    background-color: rgb(250, 250, 250);
+    color: #000;
+    font-weight: bolder;
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 10px;
+
+}
+
+.section-home a:hover {
+    color: green;
+    outline: 1px solid green;
+    font-size: 2rem;
+
+}
+
+/* about section starts */
+
+.about {
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+
+}
+
+.about h1 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    background-color: var(--yellow);
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.about p {
+    padding: 5% 20%;
+    font-size: 2rem;
+    text-align: justify;
+    text-transform: none;
+    color: var(--yellow);
+    text-shadow: 1px 1px 2px var(--yellow);
+}
+
+.about .row {
+    display: flex;
+    align-items: center;
+    /* background:var(--black); */
+    flex-wrap: wrap;
+}
+
+.about .row .image {
+    flex: 1 1 45rem;
+
+}
+
+.about .row .image img {
+    width: 100%;
+}
+
+.about .row .content {
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+
+.about .row .content h1 {
+    background-color: #000;
+}
+
+
+.about .row .content p {
+    text-align: center;
+}
+
+/* Recipies section */
+
+.recipies-background {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-image: url('./assets/images/home1.jpg');
+    background-size: 100% 100vh;
+    overflow-y: scroll;
+    padding: 0;
+}
+
+.head {
+position: fixed;
+    display: flex;
+    background-color: black;
+    color: white;
+    font-size: 5rem;
+    font-family: var(--font1);
+    padding: 5px 0;
+    border-radius: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.recipies-background .head>.logo {
+    border-radius: 50%;
+    width: 10%;
+    background-image: url('./assets/images/shaff1.jpg');
+    background-size: cover;
+    background-position: center;
+
+}
+
+.rsycategory {
+    position: fixed;
+    top: 15%;
+    /* top: 0; */
+    height: 100px;
+    width: 100%;
+    /* background-color: var(--yellow); */
+    padding: 5px 10px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-image: url('./assets/images/home1.jpg');
+    background-size: 100% 100vh;
+
+
+}
+
+.rsycategory a {
+    border: 2px solid yellow;
+    padding: 2px 15px;
+    text-decoration: none;
+    font-size: 2rem;
+    color: white;
+}
+.rsycategory a:hover{
+    /* background-color: var(--yellow); */
+    font-size: 2.5rem;
+    color: greenyellow;
+}
+
+.recipies-parent {
+    /* position: sticky;
+   top: 300px; */
+   margin-top: 19%;
+    width: 100%;
+    background-color: rgba(230, 218, 218, 0.356);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 300px 300px 300px 300px 300px;
+    padding: 5%;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+.recipy {
+    background-color: rgb(30, 32, 31);
+    border-radius: 20px;
+    color: #d3d2da;
+}
 
 
 
 
+
+
+
+
+
+
+
+
+/* footer */
+.footer {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+}
+
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    gap: 2rem;
+
+}
+
+.footer .box-container .box h3 {
+    font-size: 2.5rem;
+    color: var(--yellow);
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--black);
+    padding: 1rem 0;
+}
+
+
+.footer .box-container .box a i {
+    padding-right: .5rem;
+    color: var(--yellow);
+}
+
+.footer .box-container .box a:hover i {
+    padding-right: 2rem;
+}
+
+.footer .credit {
+    padding: 1rem;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--black);
+    border-top: .1rem solid rgba(0, 0, 0, 1);
+}
+
+.footer .credit span {
+    color: var(--yellow);
+}
 
 /* Media Quries */
 
@@ -849,12 +1084,13 @@ body {
     .accountPage .account .line h2 {
         font-size: 4rem;
     }
+
     .form-parent {
         width: 90%;
         height: 98%;
     }
-    
-/* customer account page */
+
+    /* customer account page */
     #cA-form-page .child1-logo {
         width: 100%;
         height: 38%;
@@ -865,9 +1101,10 @@ body {
         width: 100%;
         height: 62%;
         top: 38%;
-        border-radius: 0 0 20px 20px ;
+        border-radius: 0 0 20px 20px;
 
     }
+
     .form-parent .form-div {
         padding: 0 20px 20px 20px;
         height: 85%;
@@ -881,38 +1118,41 @@ body {
         align-items: center;
         justify-content: flex-start;
     }
-    
+
     .child2-form .heading h2 {
         font-size: 3rem;
     }
+
     .child2-form .heading p {
         padding-left: 2%;
         color: red;
-font-size: 3rem;
-    font-family: var(--font1);
-    
+        font-size: 3rem;
+        font-family: var(--font1);
+
     }
 
     .linee .lineUp.logo {
         width: 15%;
-        height: 35%;    
+        height: 35%;
     }
-    
+
     .form-parent .form-div form input {
         width: 100%;
         padding: 5px 20px;
         margin: 5px 0;
-    
+
     }
+
     .form-div form button {
-       
+
         padding: 7px 20px;
-    
+
     }
-.form-div form .checkbox input{
-width: fit-content;
-}
-   
+
+    .form-div form .checkbox input {
+        width: fit-content;
+    }
+
 
 
 
@@ -968,18 +1208,19 @@ width: fit-content;
     }
 
 
-    
-.linee .lineUp.logo {
-    width: 20%;
-    height: 30%;
 
-}
-.child2-form .heading {
-    height: 20%;
-    flex-direction: column;
-    /* align-items: center;
+    .linee .lineUp.logo {
+        width: 20%;
+        height: 30%;
+
+    }
+
+    .child2-form .heading {
+        height: 20%;
+        flex-direction: column;
+        /* align-items: center;
     justify-content: flex-start; */
-}
+    }
 
 
 }
@@ -1004,12 +1245,13 @@ width: fit-content;
         width: 100%;
         padding: 3% 7%;
     }
+
     .linee .lineUp.logo {
         width: 25%;
         height: 33%;
-    
+
     }
-    
+
 }
 
 
@@ -1035,6 +1277,7 @@ width: fit-content;
     border-radius: 50%;
     transform: translate(-50%, -50%);
     animation: puff 0.5s 1.8s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, borderRadius 0.2s 2.3s linear forwards;
+    /* z-index: 1; */
 }
 
 /* jumping circle styling */
@@ -1052,7 +1295,7 @@ width: fit-content;
     ;
     /* background: #f08c1a ; */
     background-color: linear-gradient(red, yellow);
-    z-index: 8;
+    /* z-index: 8; */
     width: 56px;
     height: 56px;
     position: absolute;
@@ -1063,6 +1306,7 @@ width: fit-content;
     transform: translate(-50%, -50%);
     border-radius: 50%;
     animation: init 0.5s 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, moveDown 1s 0.8s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards, moveUp 1s 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, materia 0.5s 2.7s cubic-bezier(0.86, 0, 0.07, 1) forwards, hide 2s 2.9s ease forwards;
+    z-index: 2;
 }
 
 @keyframes init {
