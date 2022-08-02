@@ -57,7 +57,7 @@ html {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: black;
+    background: #dd9e4c91;
     border-radius: 10px;
 }
 
@@ -892,7 +892,7 @@ body {
     background-color: rgba(54, 52, 52, 0.527);
     border-radius: 20px;
     height: 300px;
-    padding: .8rem;
+    padding: .8rem  .8rem  4.5rem  .8rem;
 }
 
 .recipy .image {
@@ -927,7 +927,7 @@ body {
     font-size: 1.8rem;
     font-weight: bolder;
     color: black;
-
+width: 50%;
 }
 
 .view-btn {
@@ -935,11 +935,7 @@ body {
     text-align: center;
     width: 45%;
     padding: 10px 3px;
-    /* background-color: #404041; */
-    /* background-color: orangered; */
     outline: 1px solid yellow;
-
-    /* outline: 1px solid rgba(168, 162, 162, 0.692); */
     font-weight: 400;
     color: white;
     font-size: 1.4rem;
@@ -966,9 +962,19 @@ body {
     color: black;
 
 }
+.recipy-category-header{
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+
+    grid-column: 1 / span 4;
+    font-size: 6rem;
+    font-family: var(--font1);
+}
 
 /* recipe detail */
-.recie-detail {
+.recie-detail{
+    display: none;
+}
+.recie-detail.active{
     height: 88%;
     width: 90%;
     /* background-color: #d69642f1; */
@@ -981,6 +987,7 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
 .recie-detail #cut-recipe{
     align-self: flex-end;
     font-size: 2rem;
@@ -1102,6 +1109,7 @@ body {
     width: 1em;
 }
 
+
 /* footer */
 .footer {
     position: relative;
@@ -1177,7 +1185,15 @@ body {
     }
 
     /* .recipies-parent { grid-template-columns: repeat(3, 1fr); } */
-
+    .rsycategory {
+        top: 6.7%;
+    }
+    .recipies-parent{
+        top: 12%;
+    }
+    .head{
+        padding: 8px 0;
+    }
 }
 
 @media (max-width:786px) {
@@ -1274,14 +1290,33 @@ body {
     .rsycategory {
         top: 13.5%;
     }
+    .recipies-parent{
+        top: 24%;
+    }
 
     .rsycategory a {
         padding: 2px 42px;
         /* font-size: 1.7rem; */
     }
+
+    .recipy-category-header{
+        grid-column: 1 / span 3;
+    }
+    .recipy {
+        padding: .8rem  .8rem  3rem  .8rem;
+    }
+    .item-data{
+margin: 5px;
+    }
+    
 }
 
+@media (max-width:705px) {
+    .recipy-category-header{
+        grid-column: 1 / span 2;
+    }
 
+}
 @media (max-width:672px) {
     .accountPage .logo {
         height: 20%;
@@ -1440,7 +1475,11 @@ padding: 5% 2%;
 
 
 }
-
+@media (max-width:469px) {
+    .recipy-category-header{
+        grid-column: 1 / span 1;
+    }
+}
 @media (max-width:450px) {
     html {
         font-size: 50%;
@@ -1503,9 +1542,8 @@ padding: 5% 2%;
 
     .head {
         font-size: 3.5rem;
-        padding: 15px 0;
+        padding: 20px 0;
     }
-
     .recipies-background .head>.logo {
         width: 13%;
 
@@ -1516,7 +1554,7 @@ padding: 5% 2%;
         width: 70%;
     }
     .ing-method{
-        margin-top: 28px;
+        margin-top: 50px;
     }
     .img-name h1{
         line-height: 3rem;

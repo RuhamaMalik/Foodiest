@@ -97,3 +97,109 @@ ctmrRegPage.classList.toggle("active");
 
 
 // account Section ends
+
+
+  // view Recipe 1 rice
+
+  function viewReipe1(){
+    var recipe = document.getElementById("recipy-detail");
+      recipe.classList.toggle("active");
+    }
+    
+    // remove Recipe
+    
+    function removeRecipe1(){
+      var recipe = document.getElementById("recipy-detail");
+      recipe.classList.remove("active");
+    }
+  
+
+
+
+// view Recipe 2 potato
+
+function viewReipe2(){
+  var recipe = document.getElementById("recipy-detail2");
+    recipe.classList.toggle("active");
+  }
+  
+  // remove Recipe
+  
+  function removeRecipe2(){
+    var recipe = document.getElementById("recipy-detail2");
+    recipe.classList.remove("active");
+  }
+
+
+
+  // view Recipe 3 chicken
+
+function viewReipe3(){
+  var recipe = document.getElementById("recipy-detail3");
+    recipe.classList.toggle("active");
+  }
+  
+  // remove Recipe
+  
+  function removeRecipe3(){
+    var recipe = document.getElementById("recipy-detail3");
+    recipe.classList.remove("active");
+  }
+  
+
+    // view Recipe 4 Dessert
+
+function viewReipe4(){
+  var recipe = document.getElementById("recipy-detail4");
+    recipe.classList.toggle("active");
+  }
+  
+  // remove Recipe
+  
+  function removeRecipe4(){
+    var recipe = document.getElementById("recipy-detail4");
+    recipe.classList.remove("active");
+  }
+  
+      // view Recipe 5 vegetarian
+
+function viewReipe5(){
+  var recipe = document.getElementById("recipy-detail5");
+    recipe.classList.toggle("active");
+  }
+  
+  // remove Recipe
+  
+  function removeRecipe5(){
+    var recipe = document.getElementById("recipy-detail5");
+    recipe.classList.remove("active");
+  }
+
+        // view Recipe 6 drinks
+
+function viewReipe6(){
+  var recipe = document.getElementById("recipy-detail6");
+    recipe.classList.toggle("active");
+  }
+  
+  // remove Recipe
+  
+  function removeRecipe6(){
+    var recipe = document.getElementById("recipy-detail6");
+    recipe.classList.remove("active");
+  }
+
+
+          // view Recipe 7 beef
+
+function viewReipe7(){
+  var recipe = document.getElementById("recipy-detail7");
+    recipe.classList.toggle("active");
+  }
+  
+  // remove Recipe
+  
+  function removeRecipe7(){
+    var recipe = document.getElementById("recipy-detail7");
+    recipe.classList.remove("active");
+  }
